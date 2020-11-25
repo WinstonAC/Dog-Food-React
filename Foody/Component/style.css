@@ -1,0 +1,103 @@
+body {
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 20px;
+}
+
+.lheader {
+    width: 200px;
+    font-size: 28px;
+    white-space: nowrap;
+    margin-top: 9px;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    margin-top: -2%;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    color: #999999;
+    font-family: "open sans";
+    font-size: 10px;
+}
+
+.right-header {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    font-family: "open sans";
+    margin-right: 20%;
+    margin-bottom: 0px;
+    height: 20.51px;
+    width: 50%;
+    color: #999999;
+
+}
+
+.mainphoto {
+    height: 900px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/mainunfiltered.jpg");
+    margin-top: -25px;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  .cardcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #707070;
+    border-bottom: 2px solid #707070;
+    width: 1200px;
+    /* width: 75%; */
+    margin: 0 auto;
+    margin-top: 175px;
+    margin-bottom: 150px;
+    padding: 80px 80px 80px 80px;
+    font-family: "Open Sans", sans-serif;
+  }
+  .card {
+    margin: 20px;
+    display: block;
+    overflow: hidden;
+  }
+  .card-img-top {
+    height: auto;
+    max-width: 100%;
+  }
+  .card-body {
+    padding: 0px;
+    margin: 20px;
+  }
+
+  .subtitle{
+    font-size: 15px;
+    color: black;
+
+  }
