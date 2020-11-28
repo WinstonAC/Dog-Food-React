@@ -3,3 +3,11 @@
     justify-content: space-around;
     
 }
+.imgdiv{
+    display: block;
+   
+}
+.imgdiv > img{
+    height: 100px;
+    width: 100px;
+}

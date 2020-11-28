@@ -6,7 +6,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Button from "./Button";
-
+import "./Accordion.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,11 +19,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function handleDelete(titleVal) {
-  console.log(titleVal.Data.title);
-  fetch("https://lit-scrubland-80289.herokuapp.com/recipe/" + titleVal, {
-    method: "DELETE",
-    headers: { "Content-Type": "application/json" },
-  })
+  console.log("title", titleVal.Data.title);
+  fetch(
+    "https://lit-scrubland-80289.herokuapp.com/recipe/" + titleVal.Data.title,
+    {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    }
+  )
     .then((res) => res.text())
     .then((res) => console.log(res));
 }
@@ -54,7 +57,11 @@ export default function SimpleAccordion(props) {
             <Typography> {props.Data.tools}</Typography>
             <Typography> {props.Data.directions}</Typography>
             <Typography> {props.Data.additional_comments}</Typography>
-            <button onClick={() => handleDelete(props)}>WOOF</button>
+            <div className="imgdiv">
+              <img  src={props.Data.images} />
+              <button onClick={() => handleDelete(props)}>WOOF</button>
+            </div>
+            
           </div>
         </AccordionDetails>
         //{" "}
